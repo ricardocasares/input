@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "packages/api/*/index.ts", "use": "@now/node" },
+    { "src": "packages/www/package.json", "use": "@now/next" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/packages/api/$1/index.ts" },
+    { "src": "/(.*)", "dest": "packages/www/$1" }
+  ]
+}

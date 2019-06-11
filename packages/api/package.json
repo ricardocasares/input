@@ -1,0 +1,11 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "micro": "^9.3.4"
+  },
+  "devDependencies": {
+    "@types/micro": "^7.3.3"
+  }
+}
