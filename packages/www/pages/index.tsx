@@ -1,17 +1,25 @@
 import React from "react";
+import { Bar } from "@/components/Bar";
 import { Logo } from "@/components/Logo";
 import { Text } from "@/components/Text";
 import { Button } from "@/components/Button";
-import { Box, MediaBox } from "@/components/Box";
+import { Box } from "@/components/Box";
+import { MarketingBox } from "@/components/MarketingBox";
+import { Container } from "@/components/Container";
 
-export default function Index() {
-  return (
-    <MediaBox image="/static/analysis.svg">
-      <Logo>input</Logo>
+export default () => (
+  <Container>
+    <Bar>
+      <Container>
+        <Logo beta>input</Logo>
+      </Container>
+    </Bar>
+    <MarketingBox image="/static/analysis.svg">
       <Box padding="20px">
         <Text as="h4" w="bold">
           Priceless feedback
         </Text>
+
         <Text as="p">
           Let your processes feel the joy of{" "}
           <Text as="strong" w="bold">
@@ -19,8 +27,9 @@ export default function Index() {
           </Text>{" "}
           decisions
         </Text>
-        <Button kind="primary">Get started</Button>
+
+        <Button kind="cta">Get started</Button>
       </Box>
-    </MediaBox>
-  );
-}
+    </MarketingBox>
+  </Container>
+);

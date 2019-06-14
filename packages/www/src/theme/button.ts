@@ -1,15 +1,25 @@
 export const button = {
   color: {
-    default: "#000000",
-    primary: "#FFFFFF"
+    cta: "#FFFFFF",
+    danger: "#FFFFFF",
+    default: "#FFFFFF",
+    success: "#FFFFFF"
   },
   background: {
+    cta: "#8a84fe",
+    danger: "#f03e3e",
+    default: "#222222",
+    success: "#0ca678"
+  },
+  shadow: {
+    cta: "#8a84fe",
+    danger: "#f03e3e",
     default: "#FFFFFF",
-    primary: "#5a5773"
+    success: "#0ca678"
   },
   size: {
     small: "5px 10px",
-    default: "10px 15px",
+    default: "8px 13px",
     big: "15px 20px",
     large: "20px 25px"
   },

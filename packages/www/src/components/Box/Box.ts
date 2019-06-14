@@ -16,6 +16,7 @@ export type Box = {
   height?: ResponsiveProp;
   justifyContent?: ResponsiveProp;
   width?: ResponsiveProp;
+  margin?: ResponsiveProp;
   padding?: ResponsiveProp;
 };
 
