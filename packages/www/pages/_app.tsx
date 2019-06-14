@@ -1,29 +1,41 @@
 import React from "react";
 import App, { Container } from "next/app";
 import Head from "next/head";
-import { ThemeProvider } from "@material-ui/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import theme from "@/theme";
+import { Global, css } from "@emotion/core";
+import { ThemeProvider } from "emotion-theming";
+import { theme } from "@/theme";
 
-class MyApp extends App {
-  componentDidMount() {
-    // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector("#jss-server-side");
-    jssStyles &&
-      jssStyles.parentNode &&
-      jssStyles.parentNode.removeChild(jssStyles);
-  }
-
+class Input extends App {
   render() {
     const { Component, pageProps } = this.props;
 
     return (
       <Container>
         <Head>
-          <title>input.run</title>
+          <meta name="viewport" content="width=device-width" />
+          <link
+            href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:600i&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <ThemeProvider theme={theme}>
-          <CssBaseline />
+          <Global
+            styles={css`
+              html {
+                font-size: 16px;
+                box-sizing: border-box;
+              }
+
+              *, *::* {
+                box-sizing: inherit;
+              }
+
+              body {
+                margin: 0;
+                line-height: 1.45;
+              }
+            `}
+          />
           <Component {...pageProps} />
         </ThemeProvider>
       </Container>
@@ -31,4 +43,4 @@ class MyApp extends App {
   }
 }
 
-export default MyApp;
+export default Input;

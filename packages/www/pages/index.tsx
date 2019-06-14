@@ -1,62 +1,26 @@
 import React from "react";
-import {
-  AppBar,
-  Container,
-  Toolbar,
-  Typography,
-  Button,
-  Hidden,
-  Box
-} from "@material-ui/core";
-import CTAButton from "@/components/Button";
-import theme from "@/theme";
+import { Logo } from "@/components/Logo";
+import { Text } from "@/components/Text";
+import { Button } from "@/components/Button";
+import { Box, MediaBox } from "@/components/Box";
 
-export default function App() {
+export default function Index() {
   return (
-    <Box minHeight="100vh" marginTop={["90px", "105px"]}>
-      <AppBar elevation={0}>
-        <Toolbar>
-          <Typography
-            variant="h6"
-            style={{ fontFamily: "IBM Plex Mono", flexGrow: 1 }}
-          >
-            input
-          </Typography>
-          <Hidden xsDown>
-            <Button variant="text" color="secondary">
-              Documentation
-            </Button>
-            <Button variant="text" color="secondary">
-              Signup
-            </Button>
-          </Hidden>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBar>
-
-      <Container maxWidth="xl">
-        <Box
-          justifyContent="center"
-          display={["flex", "block"]}
-          flexDirection="column"
-          paddingTop={["0", "100px"]}
-          minHeight="100vh"
-          style={{
-            backgroundImage: "url('/static/developer.svg')",
-            backgroundSize: "cover",
-            [theme.breakpoints.up("md")]: {
-              background: "red",
-              backgroundSize: "none"
-            }
-          }}
-        >
-          <Typography variant="h6">Priceless feedback</Typography>
-          <Typography color="secondary" paragraph>
-            Claim what is yours
-          </Typography>
-          <CTAButton variant="outlined">Get started</CTAButton>
-        </Box>
-      </Container>
-    </Box>
+    <MediaBox image="/static/analysis.svg">
+      <Logo>input</Logo>
+      <Box padding="20px">
+        <Text as="h4" w="bold">
+          Priceless feedback
+        </Text>
+        <Text as="p">
+          Let your processes feel the joy of{" "}
+          <Text as="strong" w="bold">
+            data-driven
+          </Text>{" "}
+          decisions
+        </Text>
+        <Button kind="primary">Get started</Button>
+      </Box>
+    </MediaBox>
   );
 }
