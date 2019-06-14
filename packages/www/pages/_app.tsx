@@ -13,11 +13,6 @@ class Input extends App {
       <Container>
         <Head>
           <title>Input → Priceless feedback</title>
-          <meta name="viewport" content="width=device-width" />
-          <link
-            href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:600i&display=swap"
-            rel="stylesheet"
-          />
         </Head>
         <ThemeProvider theme={theme}>
           <Global
@@ -30,7 +25,9 @@ class Input extends App {
                   "Segoe UI Emoji", "Segoe UI Symbol";
               }
 
-              *, *::* {
+              *,
+              *::before,
+              *::after {
                 box-sizing: inherit;
               }
 

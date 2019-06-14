@@ -6,13 +6,13 @@ export const button = {
     success: "#FFFFFF"
   },
   background: {
-    cta: "#8a84fe",
+    cta: "#7950f2",
     danger: "#f03e3e",
     default: "#222222",
     success: "#0ca678"
   },
   shadow: {
-    cta: "#8a84fe",
+    cta: "#7950f2",
     danger: "#f03e3e",
     default: "#FFFFFF",
     success: "#0ca678"
