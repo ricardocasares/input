@@ -12,6 +12,7 @@ class Input extends App {
     return (
       <Container>
         <Head>
+          <title>Input → Priceless feedback</title>
           <meta name="viewport" content="width=device-width" />
           <link
             href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:600i&display=swap"
