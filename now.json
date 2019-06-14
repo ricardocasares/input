@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "alias": "input.run",
   "builds": [
     { "src": "packages/api/*/index.ts", "use": "@now/node" },
     { "src": "packages/www/package.json", "use": "@now/next" }
