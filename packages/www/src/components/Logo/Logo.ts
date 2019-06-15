@@ -12,7 +12,7 @@ export type Logo = {
 
 export const Logo = styled.h1<Logo>`
   font-size: 24px;
-  font-family: "IBM Plex Mono";
+  font-family: ${({ theme }) => theme.font.family.default};
   padding: 20px;
   margin: 0;
   position: relative;
@@ -30,5 +30,6 @@ export const Logo = styled.h1<Logo>`
     background: #f1f0ff;
     border-radius: 4px;
     padding: 2px 6px;
+    z-index: -1;
   }
 `;

@@ -21,10 +21,6 @@ class MyDocument extends Document {
             name="Description"
             content="Input, priceless feedback from your users."
           />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:600i&display=swap"
-          />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
