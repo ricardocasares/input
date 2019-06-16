@@ -5,7 +5,7 @@ import { Global, css } from "@emotion/core";
 import { ThemeProvider } from "emotion-theming";
 import { theme } from "@/theme";
 
-class Input extends App {
+class InputApp extends App {
   render() {
     const { Component, pageProps } = this.props;
 
@@ -44,4 +44,4 @@ class Input extends App {
   }
 }
 
-export default Input;
+export default InputApp;

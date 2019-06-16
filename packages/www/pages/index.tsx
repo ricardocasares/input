@@ -1,9 +1,9 @@
 import React from "react";
 import { Bar } from "@/components/Bar";
+import { Box } from "@/components/Box";
 import { Logo } from "@/components/Logo";
 import { Text } from "@/components/Text";
 import { Button } from "@/components/Button";
-import { Box } from "@/components/Box";
 import { MarketingBox } from "@/components/MarketingBox";
 import { Container } from "@/components/Container";
 
