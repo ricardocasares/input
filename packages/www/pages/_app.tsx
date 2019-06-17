@@ -54,34 +54,12 @@ class InputApp extends App {
               h4,
               h5 {
                 margin: 0.5rem 0 0.5rem;
-                font-weight: 400;
+                font-weight: 500;
                 line-height: 1.15;
               }
 
               h1 {
                 margin-top: 0;
-                font-size: 1.802em;
-              }
-
-              h2 {
-                font-size: 1.602em;
-              }
-
-              h3 {
-                font-size: 1.424em;
-              }
-
-              h4 {
-                font-size: 1.266em;
-              }
-
-              h5 {
-                font-size: 1.125em;
-              }
-
-              small,
-              .text_small {
-                font-size: 0.889em;
               }
             `}
           />

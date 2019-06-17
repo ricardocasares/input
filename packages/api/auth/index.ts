@@ -15,7 +15,6 @@ const REDIRECT_URI = process.env.INPUT_AUTH0_REDIRECT;
 
 // lambda function
 const handler: RequestListener = async (req, res) => {
-  console.log("ENV=====", ENDPOINT);
   res.writeHead(302, {
     Location: await getAuthorizeUrl()
   });
