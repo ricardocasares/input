@@ -17,7 +17,7 @@ const LoginPage = () => (
     </Bar>
     <MarketingBox>
       <Box>
-        <Text as="h2" w="bold">
+        <Text as="h1" w="bold">
           Login first
         </Text>
 

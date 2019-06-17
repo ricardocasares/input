@@ -177,9 +177,9 @@ export const Dashboard = () => (
     <path
       fill="none"
       stroke="#3ad29f"
-      stroke-dasharray="12"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeDasharray="12"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M161.1 102.3V17h354.2"
       opacity=".5"
     />
@@ -189,17 +189,17 @@ export const Dashboard = () => (
       r="14.9"
       fill="none"
       stroke="#3ad29f"
-      stroke-dasharray="12"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeDasharray="12"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       opacity=".5"
     />
     <path
       fill="none"
       stroke="#3ad29f"
-      stroke-dasharray="12"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeDasharray="12"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M813 681.7V767H458.8"
       opacity=".5"
     />
@@ -209,9 +209,9 @@ export const Dashboard = () => (
       r="14.9"
       fill="none"
       stroke="#3ad29f"
-      stroke-dasharray="12"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeDasharray="12"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       opacity=".5"
     />
     <circle cx="617.5" cy="226.9" r="39.1" fill="url(#x)" />
@@ -220,8 +220,8 @@ export const Dashboard = () => (
     <path
       fill="none"
       stroke="#333"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M617.5 226.9l22-22"
     />
     <path
@@ -234,8 +234,8 @@ export const Dashboard = () => (
     <path
       fill="none"
       stroke="#333"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M720.5 226.9l22-22"
     />
     <path
@@ -248,8 +248,8 @@ export const Dashboard = () => (
     <path
       fill="none"
       stroke="#333"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M617.5 318.9l-23.4 23.4"
     />
     <path
@@ -262,8 +262,8 @@ export const Dashboard = () => (
     <path
       fill="none"
       stroke="#333"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M720.5 318.9l22-22"
     />
     <path
