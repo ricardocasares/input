@@ -13,38 +13,36 @@ const bg = keyframes`
   }
 `;
 
-export type MarketingBox = {
-  image: string;
-} & Box;
-
-export const MarketingBox = styled(Box)<MarketingBox>`
+export const MarketingBox = styled(Box)<Box>`
   display: flex;
-  height: 100vh;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
+  height: 100%;
+  flex-direction: row;
   position: relative;
+  padding: 20px;
 
-  &::after {
-    content: "";
-    display: block;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-image: ${props => `url(${props.image})`};
-    animation: ${bg} 1s ease;
+  & > svg {
+    width: 80%;
+    margin: 0 auto;
+    flex-grow: 1;
 
     ${media({
-      backgroundSize: ["90%", "75%", "60%", "60%"],
-      backgroundPosition: ["center 40%", "center 30%", "center right 20px"]
+      width: ["100%", "80%", "80%"]
+    })}
+  }
+
+  & > div {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    ${media({
+      justifyContent: ["flex-end", "flex-end", "center", "center"]
     })}
   }
 
   ${media({
-    justifyContent: ["flex-end", "flex-end", "center"]
+    flexDirection: ["column-reverse", "column-reverse", "row", "row"]
   })}
 `;

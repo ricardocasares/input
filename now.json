@@ -8,5 +8,10 @@
   "routes": [
     { "src": "/api/(.*)", "dest": "/packages/api/$1/index.ts" },
     { "src": "/(.*)", "dest": "packages/www/$1" }
-  ]
+  ],
+  "env": {
+    "INPUT_AUTH0_CLIENT": "@input-auth0-client",
+    "INPUT_AUTH0_ENDPOINT": "@input-auth0-endpoint",
+    "INPUT_AUTH0_REDIRECT": "@input-auth0-redirect"
+  }
 }

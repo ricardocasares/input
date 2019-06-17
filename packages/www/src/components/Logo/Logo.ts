@@ -13,8 +13,9 @@ export type Logo = {
 export const Logo = styled.h1<Logo>`
   font-size: 24px;
   font-family: ${({ theme }) => theme.font.family.default};
-  padding: 20px;
+  font-weight: 700;
   margin: 0;
+
   position: relative;
   &::after {
     content: "beta";

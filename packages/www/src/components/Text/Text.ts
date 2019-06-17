@@ -12,6 +12,4 @@ export const Text = styled.p<Text>`
   font-family: ${theme("font.family", "f")};
   font-weight: ${theme("font.weight", "w")};
   color: ${theme("font.color", "as")};
-  margin-top: 1rem;
-  margin-bottom: 2rem;
 `;

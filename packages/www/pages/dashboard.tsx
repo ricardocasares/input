@@ -7,37 +7,29 @@ import { Text } from "@/components/Text";
 import { Button } from "@/components/Button";
 import { MarketingBox } from "@/components/MarketingBox";
 import { Container } from "@/components/Container";
-import { Analysis } from "@/components/Actions/Analysis";
+import { withAuthSync } from "@/hocs/withAuthSync";
 
-const IndexPage = () => (
+const DashboardPage = () => (
   <Container>
     <Bar>
       <Container>
-        <Link href="/">
-          <Logo beta>input</Logo>
-        </Link>
+        <Logo beta>input</Logo>
       </Container>
     </Bar>
-    <MarketingBox>
-      <Box>
-        <Text as="h1" w="bold">
-          Priceless feedback
+    <MarketingBox image="/static/preferences.svg">
+      <Box padding="20px">
+        <Text as="h4" w="bold">
+          My preferences
         </Text>
 
-        <Text as="p">
-          Let your processes feel the joy of{" "}
-          <Text as="strong">data-driven</Text> decisions
-        </Text>
-
-        <Link href="/login" prefetch>
-          <Button as="a" href="/login" kind="cta">
-            Get started
+        <Link href="/logout" prefetch>
+          <Button as="a" href="/logout" kind="cta">
+            Logout
           </Button>
         </Link>
       </Box>
-      <Analysis />
     </MarketingBox>
   </Container>
 );
 
-export default IndexPage;
+export default withAuthSync(DashboardPage);

@@ -16,7 +16,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>Input → Priceless feedback</title>
           <meta
             name="Description"
             content="Input, priceless feedback from your users."

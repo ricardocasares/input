@@ -6,6 +6,7 @@
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.12",
     "@zeit/next-typescript": "latest",
+    "emotion-normalize": "^10.0.0",
     "emotion-theming": "^10.0.10",
     "facepaint": "^1.2.1",
     "next": "latest",
@@ -25,6 +26,8 @@
     "@types/next": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "babel-plugin-emotion": "^10.0.13",
+    "next-images": "^1.1.2",
     "typescript": "latest"
   }
 }

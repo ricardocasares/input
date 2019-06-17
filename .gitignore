@@ -1,5 +1,6 @@
-.env
 .next
 *.log
 .DS_Store
+.env
+.env.build
 node_modules

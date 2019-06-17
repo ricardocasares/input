@@ -28,11 +28,12 @@ export const font = {
     h2: "#000000"
   },
   size: {
-    h1: "3.052em",
-    h2: "2.441em",
-    h3: "1.953em",
-    h4: "1.563em",
-    h5: "1.25em",
+    h1: "1.802em",
+    h2: "1.602em",
+    h3: "1.424em",
+    h4: "1.266em",
+    h5: "1.125em",
+    small: "0.889em",
     default: "1em"
   },
   weight: {
