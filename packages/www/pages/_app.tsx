@@ -58,6 +58,7 @@ class InputApp extends App {
                 line-height: 1.15;
               }
 
+              p,
               h1 {
                 margin-top: 0;
               }
