@@ -1,20 +1,7 @@
-import { styled } from "@/styled";
-
-export type Base = {
-  viewbox?: string;
-};
-
-export const Base = styled.svg<Base>`
-  width: 100%;
-  height: 100%;
-`;
+import React from "react";
 
 export const Analysis = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1023.5 837.8"
-    width="100%"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1023.5 837.8">
     <defs>
       <linearGradient
         id="a"

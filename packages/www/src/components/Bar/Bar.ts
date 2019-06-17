@@ -8,7 +8,7 @@ export const Bar = styled.header<Bar>`
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 20px;
+  padding: 20px;
   background: white;
   z-index: 1;
 `;

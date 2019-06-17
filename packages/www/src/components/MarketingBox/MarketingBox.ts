@@ -21,12 +21,11 @@ export const MarketingBox = styled(Box)<Box>`
   padding: 20px;
 
   & > svg {
-    width: 80%;
     margin: 0 auto;
     flex-grow: 1;
-
+    animation: ${bg} 0.3s ease-in;
     ${media({
-      width: ["100%", "80%", "80%"]
+      maxWidth: ["100%", "75%", "50%"]
     })}
   }
 
@@ -43,6 +42,6 @@ export const MarketingBox = styled(Box)<Box>`
   }
 
   ${media({
-    flexDirection: ["column-reverse", "column-reverse", "row", "row"]
+    flexDirection: ["column-reverse", "column-reverse", "row"]
   })}
 `;

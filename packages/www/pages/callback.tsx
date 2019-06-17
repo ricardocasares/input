@@ -5,6 +5,7 @@ import { Box } from "@/components/Box";
 import { Logo } from "@/components/Logo";
 import { Text } from "@/components/Text";
 import { Button } from "@/components/Button";
+import { Login } from "@/components/Actions/Login";
 import { MarketingBox } from "@/components/MarketingBox";
 import { Container } from "@/components/Container";
 import { parse } from "querystring";
@@ -36,9 +37,9 @@ const CallbackPage: FunctionComponent<WithRouterProps> = ({ router }) => {
           <Logo beta>input</Logo>
         </Container>
       </Bar>
-      <MarketingBox image="/static/login.svg">
-        <Box padding="20px">
-          <Text as="h4" w="bold">
+      <MarketingBox>
+        <Box>
+          <Text as="h1" w="bold">
             {error && "Oh no!"}
             {!error && "Hi there!"}
           </Text>
@@ -53,6 +54,7 @@ const CallbackPage: FunctionComponent<WithRouterProps> = ({ router }) => {
             </Button>
           )}
         </Box>
+        <Login />
       </MarketingBox>
     </Container>
   );

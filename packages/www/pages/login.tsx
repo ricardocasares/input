@@ -4,6 +4,7 @@ import { Box } from "@/components/Box";
 import { Logo } from "@/components/Logo";
 import { Text } from "@/components/Text";
 import { Button } from "@/components/Button";
+import { Login } from "@/components/Actions/Login";
 import { MarketingBox } from "@/components/MarketingBox";
 import { Container } from "@/components/Container";
 
@@ -14,9 +15,9 @@ const LoginPage = () => (
         <Logo beta>input</Logo>
       </Container>
     </Bar>
-    <MarketingBox image="/static/login.svg">
-      <Box padding="20px">
-        <Text as="h4" w="bold">
+    <MarketingBox>
+      <Box>
+        <Text as="h2" w="bold">
           Login first
         </Text>
 
@@ -28,6 +29,7 @@ const LoginPage = () => (
           Login with LinkedIn
         </Button>
       </Box>
+      <Login />
     </MarketingBox>
   </Container>
 );

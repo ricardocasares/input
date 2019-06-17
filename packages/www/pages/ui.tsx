@@ -9,9 +9,11 @@ import { Container } from "@/components/Container";
 const IndexPage = () => (
   <Container>
     <Bar>
-      <Logo beta>input</Logo>
+      <Container>
+        <Logo beta>input</Logo>
+      </Container>
     </Bar>
-    <Box margin="100px 0" padding="0 ">
+    <Box padding="0 20px">
       <Text as="h1">Hello world</Text>
       <Text as="h2">Hello world</Text>
       <Text as="h3">Hello world</Text>

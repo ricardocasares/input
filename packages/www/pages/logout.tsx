@@ -6,6 +6,7 @@ import { Logo } from "@/components/Logo";
 import { Text } from "@/components/Text";
 import { Button } from "@/components/Button";
 import { MarketingBox } from "@/components/MarketingBox";
+import { Thanks } from "@/components/Actions/Thanks";
 import { Container } from "@/components/Container";
 
 const LogoutPage = () => {
@@ -21,9 +22,9 @@ const LogoutPage = () => {
           <Logo beta>input</Logo>
         </Container>
       </Bar>
-      <MarketingBox image="/static/thanks.svg">
-        <Box padding="20px">
-          <Text as="h4" w="bold">
+      <MarketingBox>
+        <Box>
+          <Text as="h1" w="bold">
             See you later!
           </Text>
 
@@ -35,6 +36,7 @@ const LogoutPage = () => {
             Ready for more?
           </Button>
         </Box>
+        <Thanks />
       </MarketingBox>
     </Container>
   );
