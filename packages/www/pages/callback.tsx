@@ -1,10 +1,10 @@
+import Link from "next/link";
 import { withRouter, WithRouterProps } from "next/router";
 import React, { FunctionComponent, useState, useEffect } from "react";
 import { Bar } from "@/components/Bar";
 import { Box } from "@/components/Box";
 import { Logo } from "@/components/Logo";
 import { Text } from "@/components/Text";
-import { Button } from "@/components/Button";
 import { Login } from "@/components/Actions/Login";
 import { MarketingBox } from "@/components/MarketingBox";
 import { Container } from "@/components/Container";
@@ -44,14 +44,11 @@ const CallbackPage: FunctionComponent<WithRouterProps> = ({ router }) => {
             {!error && "Hi there!"}
           </Text>
 
-          {error && <Text as="p">There was a problem logging you in.</Text>}
-
           {!error && <Text as="p">Hang on, we are logging you in...</Text>}
-
           {error && (
-            <Button as="a" href="/api/auth">
-              Try again?
-            </Button>
+            <Text as="p">
+              Something went wrong, please <a href="/api/auth">try again</a>.
+            </Text>
           )}
         </Box>
         <Login />
