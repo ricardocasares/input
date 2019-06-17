@@ -22,7 +22,7 @@ const LoginPage = () => (
         </Text>
 
         <Text as="p">
-          You need an account to use our services, let's fix that
+          You need an account to use our services, let's fix that.
         </Text>
 
         <Button as="a" href="/api/auth" kind="cta">

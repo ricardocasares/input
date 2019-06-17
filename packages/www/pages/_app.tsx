@@ -21,9 +21,7 @@ class InputApp extends App {
               ${normalize}
 
               html {
-                font-size: calc(
-                  14px + (18 - 10) * ((100vw - 300px) / (1600 - 300))
-                );
+                font-size: 16px;
                 box-sizing: border-box;
                 font-family: Maison, -apple-system, BlinkMacSystemFont,
                   "Segoe UI", Helvetica, sans-serif, "Apple Color Emoji",
@@ -38,6 +36,7 @@ class InputApp extends App {
 
               body {
                 margin: 0;
+                font-weight: 400;
                 line-height: 1.45;
               }
 
@@ -48,18 +47,47 @@ class InputApp extends App {
                 min-height: 100%;
               }
 
+              p {
+                margin-bottom: 1.25em;
+              }
+
               h1,
               h2,
               h3,
               h4,
               h5 {
-                margin: 0.5rem 0 0.5rem;
-                font-weight: 500;
+                margin: 2.75rem 0 1rem;
+                font-weight: 600;
                 line-height: 1.15;
               }
 
-              p,
               h1 {
+                margin-top: 0;
+                font-size: 1.802em;
+              }
+
+              h2 {
+                font-size: 1.602em;
+              }
+
+              h3 {
+                font-size: 1.424em;
+              }
+
+              h4 {
+                font-size: 1.266em;
+              }
+
+              h5 {
+                font-size: 1.125em;
+              }
+
+              small,
+              .text_small {
+                font-size: 0.889em;
+              }
+
+              p {
                 margin-top: 0;
               }
             `}
