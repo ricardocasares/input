@@ -6,6 +6,7 @@ type StringOrNumber = string | number;
 type ResponsiveProp = StringOrNumber | StringOrNumber[];
 
 export type Box = {
+  as?: string;
   align?: ResponsiveProp;
   flexDirection?: ResponsiveProp;
   flexGrow?: ResponsiveProp;

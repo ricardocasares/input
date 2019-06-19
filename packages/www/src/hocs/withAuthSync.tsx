@@ -1,11 +1,11 @@
 import Router from "next/router";
-import { NextContext } from "next";
+import { NextPageContext } from "next";
 import { parseCookies } from "nookies";
 import React, { Component, ComponentType } from "react";
 
 export function withAuthSync<T>(WrappedComponent: ComponentType<T>) {
   return class withAuthSync extends Component<T> {
-    static async getInitialProps(ctx: NextContext) {
+    static async getInitialProps(ctx: NextPageContext) {
       const token = auth(ctx);
       // @ts-ignore getInitialProps
       if (WrappedComponent.getInitialProps) {
@@ -37,7 +37,7 @@ export function withAuthSync<T>(WrappedComponent: ComponentType<T>) {
   };
 }
 
-export const auth = (ctx: NextContext) => {
+export const auth = (ctx: NextPageContext) => {
   const { token } = parseCookies(ctx);
 
   if (ctx.res && !token) {

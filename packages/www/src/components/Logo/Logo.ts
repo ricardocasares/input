@@ -11,8 +11,8 @@ export type Logo = {
 };
 
 export const Logo = styled.h1<Logo>`
-  font-size: 24px;
-  font-family: ${({ theme }) => theme.font.family.default};
+  font-size: 20px;
+
   font-weight: 700;
   margin: 0;
 
@@ -25,7 +25,7 @@ export const Logo = styled.h1<Logo>`
     font-weight: normal;
     text-transform: uppercase;
     position: relative;
-    top: -5px;
+    top: -8px;
     right: -5px;
     color: #6c63ff;
     background: #f1f0ff;

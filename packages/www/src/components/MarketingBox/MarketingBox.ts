@@ -13,7 +13,11 @@ const bg = keyframes`
   }
 `;
 
-export const MarketingBox = styled(Box)<Box>`
+export type MarketingBox = {
+  flip?: boolean;
+} & Box;
+
+export const MarketingBox = styled(Box)<MarketingBox>`
   display: flex;
   height: 100%;
   flex-direction: row;
@@ -41,7 +45,12 @@ export const MarketingBox = styled(Box)<Box>`
     })}
   }
 
-  ${media({
-    flexDirection: ["column-reverse", "column-reverse", "row"]
-  })}
+  ${({ flip }) =>
+    media({
+      flexDirection: [
+        "column-reverse",
+        "column-reverse",
+        flip ? "row-reverse" : "row"
+      ]
+    })}
 `;

@@ -1,6 +1,5 @@
-import Link from "next/link";
-import { withRouter, WithRouterProps } from "next/router";
-import React, { FunctionComponent, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { Bar } from "@/components/Bar";
 import { Box } from "@/components/Box";
 import { Logo } from "@/components/Logo";
@@ -11,7 +10,8 @@ import { Container } from "@/components/Container";
 import { parse } from "querystring";
 import { setCookie } from "nookies";
 
-const CallbackPage: FunctionComponent<WithRouterProps> = ({ router }) => {
+const CallbackPage = () => {
+  const router = useRouter();
   const [error, setError] = useState(false);
 
   useEffect(() => {
@@ -57,4 +57,4 @@ const CallbackPage: FunctionComponent<WithRouterProps> = ({ router }) => {
   );
 };
 
-export default withRouter(CallbackPage);
+export default CallbackPage;

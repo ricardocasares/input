@@ -14,7 +14,9 @@ const IndexPage = () => (
       </Container>
     </Bar>
     <Box padding="0 20px">
-      <Text as="h1">Hello world</Text>
+      <Text as="h1" w="bold">
+        Hello world
+      </Text>
       <Text as="h2">Hello world</Text>
       <Text as="h3">Hello world</Text>
       <Text as="h4">Hello world</Text>

@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import Link from "next/link";
+import { Nav } from "@/components/Link";
 import { destroyCookie } from "nookies";
 import { Bar } from "@/components/Bar";
 import { Box } from "@/components/Box";
@@ -18,8 +20,17 @@ const LogoutPage = () => {
   return (
     <Container>
       <Bar>
-        <Container>
-          <Logo beta>input</Logo>
+        <Container display="flex" flexDirection="row">
+          <Box flexGrow={1}>
+            <Link href="/">
+              <Logo beta>input</Logo>
+            </Link>
+          </Box>
+          <Box>
+            <nav>
+              <Nav href="/api/auth">Login</Nav>
+            </nav>
+          </Box>
         </Container>
       </Bar>
       <MarketingBox>

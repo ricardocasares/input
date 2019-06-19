@@ -25,7 +25,7 @@ export const button = {
   font: {
     small: ".65rem",
     default: "1rem",
-    big: ".9rem"
+    big: "1.2rem"
   },
   radius: {
     small: "4px",

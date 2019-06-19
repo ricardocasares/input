@@ -1,7 +1,6 @@
 const path = require("path");
-const withTypescript = require("@zeit/next-typescript");
 
-module.exports = withTypescript({
+module.exports = {
   target: "serverless",
   webpack(config) {
     config.resolve.alias["@"] = path.join(__dirname, "src");
@@ -10,4 +9,4 @@ module.exports = withTypescript({
   env: {
     INPUT_GA_ID: process.env.INPUT_GA_ID
   }
-});
+};
