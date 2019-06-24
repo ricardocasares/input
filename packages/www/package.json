@@ -20,6 +20,7 @@
     "start": "next start"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^8.1.0",
     "@types/facepaint": "^1.2.0",
     "@types/react": "latest",
     "@types/react-dom": "latest",

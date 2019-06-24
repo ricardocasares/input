@@ -10,3 +10,5 @@ export const theme: Theme = {
   color,
   button
 };
+
+export * from "./types";

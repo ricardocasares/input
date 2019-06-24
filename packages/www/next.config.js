@@ -1,6 +1,7 @@
 const path = require("path");
+const analyzer = require("@next/bundle-analyzer")({ enabled: true });
 
-module.exports = {
+module.exports = analyzer({
   target: "serverless",
   webpack(config) {
     config.resolve.alias["@"] = path.join(__dirname, "src");
@@ -9,4 +10,4 @@ module.exports = {
   env: {
     INPUT_GA_ID: process.env.INPUT_GA_ID
   }
-};
+});
