@@ -12,8 +12,7 @@ export type Logo = {
 
 export const Logo = styled.h1<Logo>`
   font-size: 20px;
-
-  font-weight: 700;
+  font-weight: 500;
   margin: 0;
 
   position: relative;

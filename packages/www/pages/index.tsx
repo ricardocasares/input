@@ -1,14 +1,14 @@
 import React from "react";
 import Link from "next/link";
-import { Nav } from "@/components/Link";
 import dynamic from "next/dynamic";
+import { Nav } from "@/components/Link";
 import { Bar } from "@/components/Bar";
 import { Box } from "@/components/Box";
 import { Logo } from "@/components/Logo";
 import { Text } from "@/components/Text";
 import { Button } from "@/components/Button";
-import { MarketingBox } from "@/components/MarketingBox";
 import { Container } from "@/components/Container";
+import { MarketingBox } from "@/components/MarketingBox";
 import { Analysis } from "@/components/Actions/Analysis";
 
 const Global = dynamic(() => import("@/components/Actions/Global"), {

@@ -3,4 +3,4 @@ export const color = {
   shadow: ["#000000", "#555555"]
 };
 
-export type Colors = typeof color;
+export type Color = typeof color;
