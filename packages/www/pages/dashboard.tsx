@@ -2,22 +2,17 @@ import React from "react";
 import Link from "next/link";
 import { Bar } from "@/components/Bar";
 import { Box } from "@/components/Box";
-import { Logo } from "@/components/Logo";
 import { Text } from "@/components/Text";
 import { Button } from "@/components/Button";
 import { Dashboard } from "@/components/Actions/Dashboard";
-import { MarketingBox } from "@/components/MarketingBox";
-import { Container } from "@/components/Container";
+import { Section } from "@/components/Section";
+import { Block } from "@/components/Block";
 import { withAuthSync } from "@/hocs/withAuthSync";
 
 const DashboardPage = () => (
-  <Container>
-    <Bar>
-      <Container>
-        <Logo beta>input</Logo>
-      </Container>
-    </Bar>
-    <MarketingBox>
+  <Block>
+    <Bar />
+    <Section>
       <Box>
         <Text as="h1" w="bold">
           Dashboard
@@ -32,8 +27,8 @@ const DashboardPage = () => (
         </Link>
       </Box>
       <Dashboard />
-    </MarketingBox>
-  </Container>
+    </Section>
+  </Block>
 );
 
 export default withAuthSync(DashboardPage);

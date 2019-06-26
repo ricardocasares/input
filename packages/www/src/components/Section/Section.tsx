@@ -1,7 +1,7 @@
 import { keyframes } from "@emotion/core";
 import { styled } from "@/styled";
 import { media } from "@/theme/utils";
-import { Box } from "@/components/Box";
+import { Container } from "@/components/Container";
 
 const bg = keyframes`
   0% {
@@ -13,44 +13,34 @@ const bg = keyframes`
   }
 `;
 
-export type MarketingBox = {
-  flip?: boolean;
-} & Box;
-
-export const MarketingBox = styled(Box)<MarketingBox>`
+export const Section = styled(Container)`
   display: flex;
   height: 100%;
-  flex-direction: row;
-  position: relative;
-  padding: 20px;
+  padding: 20px 0;
+  justify-content: space-between;
 
   & > svg {
     margin: 0 auto;
-    flex-grow: 1;
     animation: ${bg} 0.3s ease-in;
     ${media({
-      maxWidth: ["100%", "75%", "50%"]
+      margin: ["0 auto"],
+      maxWidth: ["100%", "80%", "35%"],
+      flexGrow: [1, 1]
     })}
   }
 
   & > div {
     display: flex;
-
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
 
     ${media({
+      flexGrow: [0, 0, 1],
       justifyContent: ["flex-end", "flex-end", "center", "center"]
-    })}
+    })};
   }
 
-  ${({ flip }) =>
-    media({
-      flexDirection: [
-        "column-reverse",
-        "column-reverse",
-        flip ? "row-reverse" : "row"
-      ]
-    })}
+  ${media({
+    flexDirection: ["column-reverse", "column-reverse", "row"]
+  })}
 `;

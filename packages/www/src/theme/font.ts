@@ -24,23 +24,23 @@ export const font = {
   },
   color: {
     p: "#666666",
-    h1: "#000000",
+    h1: "#FFFFFF",
     h3: "#444444",
-    strong: "#000000"
+    strong: "#CCCCCC"
   },
   size: {
-    h1: "1.602em",
-    h2: "1.402em",
-    h3: "1.224em",
-    h4: "1.166em",
-    h5: "1.125em",
+    h1: "1.802em",
+    h2: "1.602em",
+    h3: "1.402em",
+    h4: "1.224em",
+    h5: "1.166em",
     small: "0.889em",
     default: "1em"
   },
   weight: {
     light: 100,
     default: 400,
-    bold: 600
+    bold: 500
   }
 };
 

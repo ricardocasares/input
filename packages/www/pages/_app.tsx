@@ -13,7 +13,7 @@ class InputApp extends App {
     return (
       <Container>
         <Head>
-          <title>Input → Priceless feedback</title>
+          <title>input - graphql api</title>
         </Head>
         <ThemeProvider theme={theme}>
           <Global
@@ -21,7 +21,8 @@ class InputApp extends App {
               ${normalize}
 
               html {
-                font-size: 16px;
+                line-height: 1.5;
+                font-size: calc(1rem + 0.1vw);
                 box-sizing: border-box;
                 font-family: Maison, -apple-system, BlinkMacSystemFont,
                   "Segoe UI", Helvetica, sans-serif, "Apple Color Emoji",
@@ -37,14 +38,18 @@ class InputApp extends App {
               body {
                 margin: 0;
                 font-weight: 400;
-                line-height: 1.45;
+                background: #000;
+                color: #fff;
               }
 
               html,
               body,
               #__next {
                 height: 100%;
-                min-height: 100%;
+              }
+
+              a {
+                text-decoration: none;
               }
 
               p {
@@ -58,7 +63,7 @@ class InputApp extends App {
               h5 {
                 margin: 2.75rem 0 1rem;
                 font-weight: 600;
-                line-height: 1.15;
+                line-height: 1.5;
               }
 
               h1 {

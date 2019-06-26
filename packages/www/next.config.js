@@ -1,5 +1,7 @@
 const path = require("path");
-const analyzer = require("@next/bundle-analyzer")({ enabled: true });
+const analyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZER === "true"
+});
 
 module.exports = analyzer({
   target: "serverless",

@@ -1,32 +1,16 @@
 import React from "react";
-import Link from "next/link";
-import { Nav } from "@/components/Link";
 import { Bar } from "@/components/Bar";
 import { Box } from "@/components/Box";
-import { Logo } from "@/components/Logo";
+import { Block } from "@/components/Block";
 import { Text } from "@/components/Text";
 import { Button } from "@/components/Button";
 import { Login } from "@/components/Actions/Login";
-import { MarketingBox } from "@/components/MarketingBox";
-import { Container } from "@/components/Container";
+import { Section } from "@/components/Section";
 
 const LoginPage = () => (
-  <Container>
-    <Bar>
-      <Container display="flex" flexDirection="row">
-        <Box flexGrow={1}>
-          <Link href="/">
-            <Logo beta>input</Logo>
-          </Link>
-        </Box>
-        <Box>
-          <nav>
-            <Nav href="/api/auth">Login</Nav>
-          </nav>
-        </Box>
-      </Container>
-    </Bar>
-    <MarketingBox>
+  <Block>
+    <Bar />
+    <Section>
       <Box>
         <Text as="h1" w="bold">
           Login first
@@ -41,8 +25,8 @@ const LoginPage = () => (
         </Button>
       </Box>
       <Login />
-    </MarketingBox>
-  </Container>
+    </Section>
+  </Block>
 );
 
 export default LoginPage;

@@ -15,15 +15,16 @@ export const Button = styled.button<Button>`
   display: inline-block;
   text-decoration: none;
   color: ${theme("button.color", "kind")};
-  background: ${theme("button.background", "kind")};
-  box-shadow: 0 0 0 2px ${theme("button.shadow", "kind")}50;
+  box-shadow: 0 0 0 2px ${theme("button.shadow", "kind")};
   padding: ${theme("button.size", "size")};
   font-size: ${theme("button.font", "size")};
   font-family: ${({ theme }) => theme.font.family.default};
   border-radius: ${theme("button.radius", "size")};
-  transition: background 0.3s, box-shadow 0.3s;
+  transition: color 0.3s, background 0.3s, box-shadow 0.3s;
 
-  &:hover {
-    box-shadow: 0 0 0 3px ${theme("button.shadow", "kind")}80;
+  &:hover,
+  &:focus {
+    color: ${theme("button.color", "kind")};
+    box-shadow: 0 0 0 2px ${theme("button.shadow", "kind")};
   }
 `;

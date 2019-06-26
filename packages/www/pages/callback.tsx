@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { Bar } from "@/components/Bar";
 import { Box } from "@/components/Box";
-import { Logo } from "@/components/Logo";
 import { Text } from "@/components/Text";
 import { Login } from "@/components/Actions/Login";
-import { MarketingBox } from "@/components/MarketingBox";
-import { Container } from "@/components/Container";
+import { Section } from "@/components/Section";
 import { parse } from "querystring";
 import { setCookie } from "nookies";
+import { Block } from "@/components/Block";
 
 const CallbackPage = () => {
   const router = useRouter();
@@ -31,13 +30,9 @@ const CallbackPage = () => {
   });
 
   return (
-    <Container>
-      <Bar>
-        <Container>
-          <Logo beta>input</Logo>
-        </Container>
-      </Bar>
-      <MarketingBox>
+    <Block>
+      <Bar />
+      <Section>
         <Box>
           <Text as="h1" w="bold">
             {error && "Oh no!"}
@@ -52,8 +47,8 @@ const CallbackPage = () => {
           )}
         </Box>
         <Login />
-      </MarketingBox>
-    </Container>
+      </Section>
+    </Block>
   );
 };
 

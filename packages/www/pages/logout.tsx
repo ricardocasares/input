@@ -1,15 +1,12 @@
 import React, { useEffect } from "react";
-import Link from "next/link";
-import { Nav } from "@/components/Link";
 import { destroyCookie } from "nookies";
 import { Bar } from "@/components/Bar";
 import { Box } from "@/components/Box";
-import { Logo } from "@/components/Logo";
 import { Text } from "@/components/Text";
+import { Block } from "@/components/Block";
 import { Button } from "@/components/Button";
-import { MarketingBox } from "@/components/MarketingBox";
-import { Thanks } from "@/components/Actions/Thanks";
-import { Container } from "@/components/Container";
+import { Section } from "@/components/Section";
+import { Login } from "@/components/Actions/Login";
 
 const LogoutPage = () => {
   useEffect(() => {
@@ -18,22 +15,9 @@ const LogoutPage = () => {
   });
 
   return (
-    <Container>
-      <Bar>
-        <Container display="flex" flexDirection="row">
-          <Box flexGrow={1}>
-            <Link href="/">
-              <Logo beta>input</Logo>
-            </Link>
-          </Box>
-          <Box>
-            <nav>
-              <Nav href="/api/auth">Login</Nav>
-            </nav>
-          </Box>
-        </Container>
-      </Bar>
-      <MarketingBox>
+    <Block>
+      <Bar />
+      <Section>
         <Box>
           <Text as="h1" w="bold">
             See you later!
@@ -47,9 +31,9 @@ const LogoutPage = () => {
             Ready for more?
           </Button>
         </Box>
-        <Thanks />
-      </MarketingBox>
-    </Container>
+        <Login />
+      </Section>
+    </Block>
   );
 };
 

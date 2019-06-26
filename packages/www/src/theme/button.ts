@@ -1,18 +1,18 @@
 export const button = {
   color: {
-    cta: "#FFFFFF",
+    cta: "rgb(0, 118, 255)",
     danger: "#FFFFFF",
     default: "#333333",
     success: "#FFFFFF"
   },
   background: {
-    cta: "#7950f2",
+    cta: "transparent",
     danger: "#f03e3e",
     default: "#FFFFFF",
     success: "#0ca678"
   },
   shadow: {
-    cta: "#7950f2",
+    cta: "rgb(0, 118, 255)",
     danger: "#f03e3e",
     default: "#333333",
     success: "#0ca678"

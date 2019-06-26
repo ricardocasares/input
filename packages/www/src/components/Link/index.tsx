@@ -1,7 +1,7 @@
 import { styled } from "@/styled";
 
 export const Nav = styled.a`
-  color: #333;
+  color: #fff;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 14px;
