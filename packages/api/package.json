@@ -2,6 +2,18 @@
   "name": "api",
   "version": "1.0.0",
   "private": true,
-  "dependencies": {},
-  "devDependencies": {}
+  "engines": {
+    "node": "10.x"
+  },
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-helmet": "^4.2.0",
+    "services": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.48",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-helmet": "^3.1.2"
+  }
 }

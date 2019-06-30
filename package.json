@@ -16,13 +16,15 @@
     "packages/*"
   ],
   "scripts": {
+    "start": "run-s docker:*",
+    "stop": "docker-compose down",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:logs": "docker logs input_app_1 -f",
+    "hasura": "hasura --admin-secret secret --project ./packages/hasura/",
+    "console": "hasura console --admin-secret secret --project ./packages/hasura/",
     "format": "npx prettier --write **/*.{js}",
-    "release": "npx semantic-release",
-    "start": "run-p hasura application",
-    "hasura": "run-s hasura:*",
-    "hasura:docker": "docker-compose -f packages/hasura/docker-compose.yml up -d",
-    "hasura:console": "hasura console --admin-secret secret --project ./packages/hasura/",
-    "application": "now dev"
+    "release": "npx semantic-release"
   },
   "husky": {
     "hooks": {

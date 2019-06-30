@@ -1,15 +1,25 @@
 version: "3.6"
 services:
+  app:
+    build: .
+    env_file: .env
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "hasura"
+    volumes:
+      - ./:/app
   hasura:
     image: hasura/graphql-engine:v1.0.0-beta.2.cli-migrations
-    env_file: ../../.env
+    env_file: .env
     restart: always
     ports:
       - "8080:8080"
     depends_on:
       - "postgres"
     volumes:
-      - ./migrations:/hasura-migrations
+      - ./packages/hasura/migrations:/hasura-migrations
   postgres:
     image: postgres
     restart: always

@@ -1,0 +1,7 @@
+.env
+.tmp
+.next
+node_modules
+!now.json
+!.env.build
+*
