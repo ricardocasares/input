@@ -1,0 +1,4 @@
+- args:
+    sql: alter table "public"."subscriptions" add constraint "subscriptions_paypal_subscription_id_key"
+      unique ("paypal_subscription_id");
+  type: run_sql

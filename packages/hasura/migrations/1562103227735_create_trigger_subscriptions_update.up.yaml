@@ -1,0 +1,20 @@
+- args:
+    enable_manual: false
+    headers:
+    - name: x-secret
+      value_from_env: HASURA_GRAPHQL_ADMIN_SECRET
+    name: subscriptions_update
+    retry_conf:
+      interval_sec: 10
+      num_retries: 0
+      timeout_sec: 60
+    table:
+      name: subscriptions
+      schema: public
+    update:
+      columns:
+      - paypal_subcription_id
+      - plan_id
+      - paypal_plan_id
+    webhook_from_env: TRIGGER_SUBSCRIPTIONS_UPDATE
+  type: create_event_trigger

@@ -18,19 +18,15 @@
     "sourceMap": true,
     "strict": true,
     "target": "esnext",
-    "baseUrl": "./",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
-    "typeRoots": [
-      "node_modules/@types",
-      "src/types"
-    ],
-    "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "forceConsistentCasingInFileNames": true,
     "isolatedModules": true
   },
   "exclude": [

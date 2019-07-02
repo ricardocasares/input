@@ -1,9 +1,61 @@
-import { create } from "../../app";
-import { paypal } from "../../../../services/paypal";
+import { create } from "../../../app";
+import { paypal } from "../../../services/paypal";
+import { hasura } from "../../../services/hasura";
+import { PAYPAL_SUBSCRIPTIONS_PATH } from "../../../constants";
+import { verifyHasura } from "../../../middleware/varify-hasura";
+import { Subscription } from "../../../types";
+
+const mutation = ({
+  id,
+  status,
+  approval_url,
+  paypal_subscription_id
+}: Record<string, string>) => `mutation {
+  update_subscriptions(where: {
+    id: {_eq: ${id}}},
+    _set: {
+      paypal_subcription_id: "${paypal_subscription_id}",
+      status: "${status}",
+      approval_url: "${approval_url}"
+    }) {
+      affected_rows
+    }
+}`;
 
 export default create(app =>
-  app.use(async ctx => {
-    const plans = await paypal("/v1/billing/plans");
-    ctx.body = plans;
+  app.use(verifyHasura()).use(async (ctx, next) => {
+    const {
+      event: {
+        data: { new: subscription }
+      }
+    } = ctx.request.body;
+
+    const { id, paypal_plan_id: plan_id } = subscription;
+
+    const {
+      data: { id: paypal_subscription_id, status, links }
+    } = await paypal.post<Subscription>(PAYPAL_SUBSCRIPTIONS_PATH, {
+      plan_id,
+      quantity: "1",
+      auto_renewal: true,
+      application_context: {
+        brand_name: "input",
+        user_action: "CONTINUE",
+        return_url: "https://example.com/returnUrl",
+        cancel_url: "https://example.com/cancelUrl"
+      }
+    });
+
+    const [{ href: approval_url }] = links.filter(
+      link => link.rel === "approve"
+    );
+
+    await hasura.post("/graphql", {
+      query: mutation({ id, status, approval_url, paypal_subscription_id })
+    });
+
+    ctx.status = 200;
+
+    await next();
   })
 );

@@ -1,0 +1,13 @@
+- args:
+    sql: CREATE TABLE "public"."subscriptions"("id" bigserial NOT NULL, "plan_id"
+      integer NOT NULL, "paypal_plan_id" text NOT NULL, "paypal_subscription_id" text
+      , "user_id" text NOT NULL, "status" text NOT NULL DEFAULT 'PENDING', "created_at"
+      timestamp NOT NULL DEFAULT now(), "updated_at" timestamp NOT NULL DEFAULT now(),
+      PRIMARY KEY ("id","user_id","paypal_subscription_id") , UNIQUE ("id"), UNIQUE
+      ("paypal_subscription_id"), UNIQUE ("user_id")); COMMENT ON TABLE "public"."subscriptions"
+      IS 'Stores subscriptions'
+  type: run_sql
+- args:
+    name: subscriptions
+    schema: public
+  type: add_existing_table_or_view

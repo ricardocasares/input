@@ -1,0 +1,7 @@
+- args:
+    sql: ALTER TABLE "public"."subscriptions" ALTER COLUMN "paypal_subscription_id"
+      SET NOT NULL;
+  type: run_sql
+- args:
+    sql: COMMENT ON COLUMN "public"."subscriptions"."paypal_subscription_id" IS 'null'
+  type: run_sql

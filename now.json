@@ -10,8 +10,8 @@
     { "src": "/(.*)", "dest": "packages/www/$1" }
   ],
   "env": {
+    "INPUT_AUTH0_URL": "@input-auth0-endpoint",
     "INPUT_AUTH0_CLIENT": "@input-auth0-client",
-    "INPUT_AUTH0_ENDPOINT": "@input-auth0-endpoint",
-    "INPUT_AUTH0_REDIRECT": "@input-auth0-redirect"
+    "INPUT_AUTH0_REDIRECT_URI": "@input-auth0-redirect"
   }
 }

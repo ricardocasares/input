@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { parse } from "querystring";
+import { setCookie } from "nookies";
 import { useRouter } from "next/router";
 import { Bar } from "@/components/Bar";
 import { Box } from "@/components/Box";
 import { Text } from "@/components/Text";
 import { Login } from "@/components/Actions/Login";
 import { Section } from "@/components/Section";
-import { parse } from "querystring";
-import { setCookie } from "nookies";
 import { Block } from "@/components/Block";
 
 const CallbackPage = () => {

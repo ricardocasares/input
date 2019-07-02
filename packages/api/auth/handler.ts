@@ -1,31 +1,23 @@
 import { promisify } from "util";
 import { randomBytes } from "crypto";
-import { RequestListener } from "http";
 import { parse, format, URLSearchParams } from "url";
-
-// constants
-const NONCE_BYTES = 16;
-const NONCE_ENCODING = "base64";
-const SCOPES = "openid profile email";
-const CONNECTION = "linkedin";
-const RESPONSE_TYPE = "token id_token";
-const CLIENT_ID = process.env.INPUT_AUTH0_CLIENT;
-const ENDPOINT = process.env.INPUT_AUTH0_ENDPOINT;
-const REDIRECT_URI = process.env.INPUT_AUTH0_REDIRECT;
-
-// lambda function
-const handler: RequestListener = async (req, res) => {
-  res.writeHead(302, {
-    Location: await getAuthorizeUrl()
-  });
-
-  res.end();
-};
+import { create } from "../app";
+import {
+  NONCE_BYTES,
+  NONCE_ENCODING,
+  AUTH0_URL,
+  AUTH0_SCOPES,
+  AUTH0_CLIENT_ID,
+  AUTH0_CONNECTION,
+  AUTH0_REDIRECT_URI,
+  AUTH0_RESPONSE_TYPE
+} from "../constants";
 
 // helper functions
 const random = promisify(randomBytes);
+
 const getAuthorizeUrl = async () => {
-  const url = parse(ENDPOINT);
+  const url = parse(AUTH0_URL);
   const nonce = await random(NONCE_BYTES)
     .then(token => token.toString(NONCE_ENCODING))
     .catch(err => {
@@ -35,14 +27,18 @@ const getAuthorizeUrl = async () => {
 
   const search = new URLSearchParams({
     nonce,
-    scopes: SCOPES,
-    client_id: CLIENT_ID,
-    connection: CONNECTION,
-    redirect_uri: REDIRECT_URI,
-    response_type: RESPONSE_TYPE
+    scopes: AUTH0_SCOPES,
+    client_id: AUTH0_CLIENT_ID,
+    connection: AUTH0_CONNECTION,
+    redirect_uri: AUTH0_REDIRECT_URI,
+    response_type: AUTH0_RESPONSE_TYPE
   }).toString();
 
   return format({ ...url, search });
 };
 
-export default handler;
+export default create(app =>
+  app.use(async ctx => {
+    ctx.redirect(await getAuthorizeUrl());
+  })
+);
