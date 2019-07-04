@@ -1,0 +1,6 @@
+- args:
+    sql: ALTER TABLE "public"."subscriptions" ADD COLUMN "plan_id" int4
+  type: run_sql
+- args:
+    sql: ALTER TABLE "public"."subscriptions" ALTER COLUMN "plan_id" DROP NOT NULL
+  type: run_sql

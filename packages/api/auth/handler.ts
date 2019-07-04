@@ -13,6 +13,8 @@ import {
   AUTH0_RESPONSE_TYPE
 } from "../constants";
 
+console.log(AUTH0_REDIRECT_URI);
+
 // helper functions
 const random = promisify(randomBytes);
 

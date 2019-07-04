@@ -6,7 +6,7 @@ import { Block } from "@/components/Block";
 import { Text } from "@/components/Text";
 import { Button } from "@/components/Button";
 import { Section } from "@/components/Section";
-import { Circuit } from "@/components/Actions/Circuit";
+import { Globe } from "@/components/Actions/Globe";
 
 const IndexPage = () => (
   <Block>
@@ -14,19 +14,19 @@ const IndexPage = () => (
     <Block>
       <Section>
         <Box>
-          <Text as="h1">Instant data</Text>
+          <Text as="h1">Instant Data</Text>
 
           <Text as="p">
-            Consume any website data as a <Text as="strong">GraphQL API</Text>
+            Consume any website as a <Text as="strong">GraphQL</Text> endpoint
           </Text>
 
-          <Link href="/login" prefetch>
-            <Button as="a" href="/login" kind="cta">
+          <Link href="/signup" prefetch>
+            <Button as="a" href="/signup" kind="cta">
               Get started
             </Button>
           </Link>
         </Box>
-        <Circuit />
+        <Globe />
       </Section>
     </Block>
   </Block>

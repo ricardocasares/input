@@ -7,21 +7,21 @@ import { Button } from "@/components/Button";
 import { Login } from "@/components/Actions/Login";
 import { Section } from "@/components/Section";
 
-const LoginPage = () => (
+const SignUp = () => (
   <Block>
     <Bar />
     <Section>
       <Box>
-        <Text as="h1" w="bold">
-          Login first
+        <Text as="h2" w="bold">
+          Don't be a stranger
         </Text>
 
         <Text as="p">
-          You need an account to use our services, let's fix that.
+          You need an account to use our services, let's fix that
         </Text>
 
         <Button as="a" href="/api/auth" kind="cta">
-          Login with LinkedIn
+          Signup with GitHub
         </Button>
       </Box>
       <Login />
@@ -29,4 +29,4 @@ const LoginPage = () => (
   </Block>
 );
 
-export default LoginPage;
+export default SignUp;

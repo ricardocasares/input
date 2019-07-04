@@ -1,0 +1,6 @@
+- args:
+    sql: ALTER TABLE "public"."subscriptions" ADD COLUMN "updated_at" time
+  type: run_sql
+- args:
+    sql: ALTER TABLE "public"."subscriptions" ALTER COLUMN "updated_at" DROP NOT NULL
+  type: run_sql

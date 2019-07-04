@@ -1,0 +1,10 @@
+- args:
+    sql: ALTER TABLE "public"."subscriptions" ALTER COLUMN "updated_at" TYPE timestamp;
+  type: run_sql
+- args:
+    sql: ALTER TABLE ONLY "public"."subscriptions" ALTER COLUMN "updated_at" SET DEFAULT
+      now();
+  type: run_sql
+- args:
+    sql: COMMENT ON COLUMN "public"."subscriptions"."updated_at" IS ''
+  type: run_sql

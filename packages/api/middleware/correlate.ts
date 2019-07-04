@@ -12,6 +12,13 @@ export const correlate = (header = REQ_ID_HEADER): Middleware => async (
   ctx,
   next
 ) => {
-  ctx.id = ctx.get(header) || nanoid();
+  if (!ctx.get(header)) {
+    const id = nanoid();
+    ctx.set(header, id);
+    ctx.req.headers[header] = id;
+  } else {
+    ctx.set(header, ctx.get(header));
+  }
+
   await next();
 };

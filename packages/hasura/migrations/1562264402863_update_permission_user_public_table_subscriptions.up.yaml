@@ -1,0 +1,18 @@
+- args:
+    permission:
+      allow_aggregations: false
+      columns:
+      - approval_url
+      - created_at
+      - plan_id
+      - status
+      - updated_at
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+      limit: 1
+    role: user
+    table:
+      name: subscriptions
+      schema: public
+  type: create_select_permission

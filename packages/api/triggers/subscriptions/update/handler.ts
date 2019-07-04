@@ -9,14 +9,15 @@ const mutation = ({
   id,
   status,
   approval_url,
-  paypal_subscription_id
+  subscription_id
 }: Record<string, string>) => `mutation {
   update_subscriptions(where: {
     id: {_eq: ${id}}},
     _set: {
-      paypal_subcription_id: "${paypal_subscription_id}",
+      subcription_id: "${subscription_id}",
       status: "${status}",
       approval_url: "${approval_url}"
+      updated_at: "${new Date().toISOString()}"
     }) {
       affected_rows
     }
@@ -30,17 +31,17 @@ export default create(app =>
       }
     } = ctx.request.body;
 
-    const { id, paypal_plan_id: plan_id } = subscription;
+    const { id, plan_id } = subscription;
 
     const {
-      data: { id: paypal_subscription_id, status, links }
+      data: { id: subscription_id, status, links }
     } = await paypal.post<Subscription>(PAYPAL_SUBSCRIPTIONS_PATH, {
       plan_id,
       quantity: "1",
       auto_renewal: true,
       application_context: {
         brand_name: "input",
-        user_action: "CONTINUE",
+        user_action: "SUBSCRIBE_NOW",
         return_url: "https://example.com/returnUrl",
         cancel_url: "https://example.com/cancelUrl"
       }
@@ -51,7 +52,7 @@ export default create(app =>
     );
 
     await hasura.post("/graphql", {
-      query: mutation({ id, status, approval_url, paypal_subscription_id })
+      query: mutation({ id, status, approval_url, subscription_id })
     });
 
     ctx.status = 200;

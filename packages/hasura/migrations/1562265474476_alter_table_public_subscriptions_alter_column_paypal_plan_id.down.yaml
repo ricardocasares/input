@@ -1,0 +1,6 @@
+- args:
+    sql: COMMENT ON COLUMN "public"."subscriptions"."paypal_plan_id" IS 'null'
+  type: run_sql
+- args:
+    sql: alter table "public"."subscriptions" rename column "plan_id" to "paypal_plan_id";
+  type: run_sql

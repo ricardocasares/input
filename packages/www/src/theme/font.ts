@@ -23,7 +23,7 @@ export const font = {
     ])
   },
   color: {
-    p: "#666666",
+    p: "#888888",
     h1: "#FFFFFF",
     h3: "#444444",
     strong: "#CCCCCC"

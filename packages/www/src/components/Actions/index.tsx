@@ -1,5 +1,5 @@
 export * from "./Login";
-export * from "./Global";
+export * from "./Globe";
 export * from "./Thanks";
 export * from "./Dashboard";
 export * from "./Analysis";
