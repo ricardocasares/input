@@ -20,6 +20,6 @@
     "INPUT_PAYPAL_APPROVED_URI": "@input-paypal-approved-uri",
     "INPUT_PAYPAL_REJECTED_URI": "@input-paypal-rejected-uri",
     "INPUT_HASURA_URL": "@input-hasura-url",
-    "HASURA_GRAPHQL_ADMIN_SECRET": "@input-hasura-admin-scret"
+    "HASURA_GRAPHQL_ADMIN_SECRET": "@input-hasura-secret"
   }
 }
