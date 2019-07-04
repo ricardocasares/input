@@ -12,6 +12,14 @@
   "env": {
     "INPUT_AUTH0_URL": "@input-auth0-endpoint",
     "INPUT_AUTH0_CLIENT": "@input-auth0-client",
-    "INPUT_AUTH0_REDIRECT_URI": "@input-auth0-redirect"
+    "INPUT_AUTH0_REDIRECT_URI": "@input-auth0-redirect-uri",
+    "INPUT_PAYPAL_URL": "@input-paypal-url",
+    "INPUT_PAYPAL_CLIENT": "@input-paypal-client",
+    "INPUT_PAYPAL_SECRET": "@input-paypal-secret",
+    "INPUT_PAYPAL_WEBHOOK_ID": "@input-paypal-webhook-id",
+    "INPUT_PAYPAL_APPROVED_URI": "@input-paypal-approved-uri",
+    "INPUT_PAYPAL_REJECTED_URI": "@input-paypal-rejected-uri",
+    "INPUT_HASURA_URL": "@input-hasura-url",
+    "HASURA_GRAPHQL_ADMIN_SECRET": "@input-hasura-admin-scret"
   }
 }
