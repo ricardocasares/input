@@ -1,8 +1,8 @@
-import { Middleware } from "koa";
+import { MW } from "koa";
 import { paypal } from "../services/paypal";
 import { PAYPAL_VERIFY_SUCCESS, PAYPAL_VERIFY_PATH } from "../constants";
 
-export const verifyPaypal = (): Middleware => async (ctx, next) => {
+export const verifyPaypal = (): MW => async (ctx, next) => {
   const {
     "PAYPAL-CERT-URL": cert_url,
     "PAYPAL-AUTH-ALGO": auth_algo,

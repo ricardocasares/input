@@ -9,3 +9,7 @@ export type Subscription = {
   status: "APPROVAL_PENDING" | "CREATED";
   links: Link[];
 };
+
+declare module "koa" {
+  interface MW extends Middleware<{}, Context> {}
+}
