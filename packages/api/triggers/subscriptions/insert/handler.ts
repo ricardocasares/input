@@ -1,9 +1,14 @@
 import { create } from "../../../app";
 import { paypal } from "../../../services/paypal";
 import { hasura } from "../../../services/hasura";
-import { PAYPAL_SUBSCRIPTIONS_PATH } from "../../../constants";
 import { verifyHasura } from "../../../middleware/varify-hasura";
 import { Subscription } from "../../../types";
+import {
+  PAYPAL_SUBSCRIPTIONS_PATH,
+  PAYPAL_REJECTED_URI,
+  PAYPAL_APPROVED_URI,
+  REQ_ID_HEADER
+} from "../../../constants";
 
 const mutation = ({
   id,
@@ -35,25 +40,33 @@ export default create(app =>
 
     const {
       data: { id: subscription_id, status, links }
-    } = await paypal.post<Subscription>(PAYPAL_SUBSCRIPTIONS_PATH, {
-      plan_id,
-      quantity: "1",
-      auto_renewal: true,
-      application_context: {
-        brand_name: "input",
-        user_action: "SUBSCRIBE_NOW",
-        return_url: "https://example.com/returnUrl",
-        cancel_url: "https://example.com/cancelUrl"
-      }
-    });
+    } = await paypal.post<Subscription>(
+      PAYPAL_SUBSCRIPTIONS_PATH,
+      {
+        plan_id,
+        quantity: "1",
+        auto_renewal: true,
+        application_context: {
+          brand_name: "input",
+          user_action: "SUBSCRIBE_NOW",
+          return_url: PAYPAL_APPROVED_URI,
+          cancel_url: PAYPAL_REJECTED_URI
+        }
+      },
+      { headers: { [REQ_ID_HEADER]: ctx.get(REQ_ID_HEADER) } }
+    );
 
     const [{ href: approval_url }] = links.filter(
       link => link.rel === "approve"
     );
 
-    await hasura.post("/graphql", {
-      query: mutation({ id, status, approval_url, subscription_id })
-    });
+    await hasura.post(
+      "/graphql",
+      {
+        query: mutation({ id, status, approval_url, subscription_id })
+      },
+      { headers: { [REQ_ID_HEADER]: ctx.get(REQ_ID_HEADER) } }
+    );
 
     ctx.status = 200;
 
