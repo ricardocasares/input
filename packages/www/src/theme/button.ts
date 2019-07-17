@@ -1,21 +1,24 @@
 export const button = {
   color: {
     cta: "rgb(0, 118, 255)",
-    danger: "#FFFFFF",
-    default: "#333333",
-    success: "#FFFFFF"
+    danger: "#f03e3e",
+    default: "#888888",
+    success: "#0ca678",
+    link: "rgb(0, 118, 255)"
   },
   background: {
     cta: "transparent",
-    danger: "#f03e3e",
-    default: "#FFFFFF",
-    success: "#0ca678"
+    danger: "transparent",
+    default: "transparent",
+    success: "transparent",
+    link: "transparent"
   },
   shadow: {
     cta: "rgb(0, 118, 255)",
     danger: "#f03e3e",
-    default: "#333333",
-    success: "#0ca678"
+    default: "#888888",
+    success: "#0ca678",
+    link: "transparent"
   },
   size: {
     small: "5px 10px",
@@ -23,7 +26,7 @@ export const button = {
     default: "8px 12px"
   },
   font: {
-    small: ".65rem",
+    small: ".85rem",
     default: "1rem",
     big: "1.2rem"
   },

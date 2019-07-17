@@ -1,3 +1,0 @@
-- args:
-    name: subscriptions_update
-  type: delete_event_trigger

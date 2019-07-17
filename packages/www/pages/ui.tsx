@@ -31,6 +31,9 @@ const IndexPage = () => (
           <Button as="a" href="#" size="big">
             Hello world
           </Button>
+          <Button as="a" href="#" size="big" kind="link">
+            Hello world
+          </Button>
         </Box>
         <Box>
           <Button size="small" kind="cta">
@@ -41,6 +44,9 @@ const IndexPage = () => (
             Hello world
           </Button>
           <Button as="a" href="#" size="big" kind="cta">
+            Hello world
+          </Button>
+          <Button as="a" href="#" size="big" kind="link">
             Hello world
           </Button>
         </Box>
@@ -55,6 +61,9 @@ const IndexPage = () => (
           <Button as="a" href="#" size="big" kind="danger">
             Hello world
           </Button>
+          <Button as="a" href="#" size="big" kind="link">
+            Hello world
+          </Button>
         </Box>
         <Box>
           <Button size="small" kind="success">
@@ -65,6 +74,9 @@ const IndexPage = () => (
             Hello world
           </Button>
           <Button as="a" href="#" size="big" kind="success">
+            Hello world
+          </Button>
+          <Button as="a" href="#" size="big" kind="link">
             Hello world
           </Button>
         </Box>

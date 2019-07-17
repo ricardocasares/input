@@ -1,7 +1,0 @@
-- args:
-    sql: COMMENT ON COLUMN "public"."subscriptions"."paypal_subcription_id" IS ''
-  type: run_sql
-- args:
-    sql: alter table "public"."subscriptions" rename column "paypal_subcription_id"
-      to "subcription_id";
-  type: run_sql

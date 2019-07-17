@@ -1,3 +1,0 @@
-- args:
-    name: subscriptions_insert
-  type: delete_event_trigger

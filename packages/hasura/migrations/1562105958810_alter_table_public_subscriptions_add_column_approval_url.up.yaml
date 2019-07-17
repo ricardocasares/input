@@ -1,4 +1,0 @@
-- args:
-    sql: ALTER TABLE "public"."subscriptions" ADD COLUMN "approval_url" text NULL
-      UNIQUE
-  type: run_sql

@@ -25,7 +25,6 @@ export const font = {
   color: {
     p: "#888888",
     h1: "#FFFFFF",
-    h3: "#444444",
     strong: "#CCCCCC"
   },
   size: {

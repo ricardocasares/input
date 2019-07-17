@@ -1,7 +1,0 @@
-- args:
-    sql: alter table "public"."subscriptions" drop constraint "subscriptions_pkey";
-  type: run_sql
-- sql: |-
-    alter table "public"."subscriptions"
-        add constraint "subscriptions_pkey" primary key ( "user_id", "paypal_subscription_id", "id" );
-  type: run_sql

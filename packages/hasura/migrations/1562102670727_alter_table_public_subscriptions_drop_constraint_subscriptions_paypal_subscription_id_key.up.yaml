@@ -1,3 +1,0 @@
-- args:
-    sql: alter table "public"."subscriptions" drop constraint "subscriptions_paypal_subscription_id_key";
-  type: run_sql

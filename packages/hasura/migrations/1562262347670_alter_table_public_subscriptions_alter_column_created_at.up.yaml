@@ -1,6 +1,0 @@
-- args:
-    sql: ALTER TABLE "public"."subscriptions" ALTER COLUMN "created_at" TYPE timestamp;
-  type: run_sql
-- args:
-    sql: COMMENT ON COLUMN "public"."subscriptions"."created_at" IS ''
-  type: run_sql

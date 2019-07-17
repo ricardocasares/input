@@ -1,3 +1,0 @@
-- args:
-    sql: ALTER TABLE "public"."subscriptions" DROP COLUMN "active"
-  type: run_sql

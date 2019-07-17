@@ -1,7 +1,0 @@
-- args:
-    sql: ALTER TABLE "public"."subscriptions" ALTER COLUMN "updated_at" TYPE timestamp
-      without time zone;
-  type: run_sql
-- args:
-    sql: COMMENT ON COLUMN "public"."subscriptions"."updated_at" IS 'null'
-  type: run_sql

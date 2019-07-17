@@ -5,7 +5,7 @@ import { styled } from "@/styled";
 export type Button = {
   as?: string;
   href?: string;
-  kind?: "cta" | "danger" | "success";
+  kind?: "cta" | "link" | "danger" | "success";
   size?: "small" | "big" | "large";
 } & HTMLAttributes<HTMLButtonElement>;
 
@@ -15,6 +15,7 @@ export const Button = styled.button<Button>`
   display: inline-block;
   text-decoration: none;
   color: ${theme("button.color", "kind")};
+  background: ${theme("button.background", "kind")};
   box-shadow: 0 0 0 2px ${theme("button.shadow", "kind")};
   padding: ${theme("button.size", "size")};
   font-size: ${theme("button.font", "size")};
@@ -24,7 +25,7 @@ export const Button = styled.button<Button>`
 
   &:hover,
   &:focus {
-    color: ${theme("button.color", "kind")};
-    box-shadow: 0 0 0 2px ${theme("button.shadow", "kind")};
+    color: #fff;
+    box-shadow: 0 0 0 3px ${theme("button.shadow", "kind")};
   }
 `;
