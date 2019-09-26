@@ -25,7 +25,6 @@ export const Button = styled.button<Button>`
 
   &:hover,
   &:focus {
-    color: #fff;
     box-shadow: 0 0 0 3px ${theme("button.shadow", "kind")};
   }
 `;

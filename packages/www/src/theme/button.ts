@@ -1,6 +1,6 @@
 export const button = {
   color: {
-    cta: "rgb(0, 118, 255)",
+    cta: "#fff",
     danger: "#f03e3e",
     default: "#888888",
     success: "#0ca678",

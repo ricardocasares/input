@@ -7,7 +7,7 @@ import { Button } from "@/components/Button";
 import { Login } from "@/components/Actions/Login";
 import { Section } from "@/components/Section";
 
-const SignUp = () => (
+const LoginPage = () => (
   <Block>
     <Bar />
     <Section>
@@ -29,4 +29,4 @@ const SignUp = () => (
   </Block>
 );
 
-export default SignUp;
+export default LoginPage;
